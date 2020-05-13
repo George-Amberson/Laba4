@@ -21,7 +21,7 @@ int main()
     cout << F;
     F.Delete(Q);
     F.out(Q);
-  
+    cout << "Everything's fine" << endl;
   }
   catch (length_error& er)
   {
