@@ -17,7 +17,20 @@ public:
   Square Square_Up();
   Cube& operator =(Cube& rhs);
   ostream& print(ostream& out);
+  int Type()override
+  {
+    return 8;
+  }
+  int GetSize()override
+  {
+    return (*this).Type();
+  }
+  int get_meentional()override
+  {
+    return (*this).Square_low().get_meentional();
+  }
 private:
+
   Square up;
 };
 #include "cube_doing.h"

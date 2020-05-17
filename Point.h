@@ -20,7 +20,20 @@ public:
   float Area()override;
   float V()override;
   void set_Point(First* er, int size);
+  int Type()override
+  {
+    return 1;
+  }
+  int GetSize()override
+  {
+    return (*this).Type();
+  }
+  int get_meentional()override
+  {
+    return (*this).get_size();
+  }
 private:
+
   First* koorF;
   int mer;
 };

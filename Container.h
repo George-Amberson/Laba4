@@ -6,6 +6,8 @@
 #include"Line.h"
 #include"Point.h"
 #include"lin_null.h"
+#include<fstream>
+#include "UsClass.h"
 template<class R>
 class Container 
 {
@@ -26,6 +28,9 @@ public:
   friend ostream& operator<<(ostream& out, Container<H>& rhs);
   template<class E>
   void out(E& _in);
+
+  void Writeln(char B[]);
+  void Readln(char B[]);
 private:
   lin_null** Array;
   int size;

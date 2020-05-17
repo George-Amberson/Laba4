@@ -5,12 +5,17 @@ using namespace std;
 class lin_null
 {
 public:
+ 
   virtual ~lin_null(){}
-  virtual float Area() = 0;
-  virtual float V() = 0;
-  virtual ostream& print(ostream& out) = 0;
+  virtual float Area()=0;
+  virtual float V()=0;
+  virtual ostream& print(ostream& out)=0;
   friend ostream& operator<<(ostream& out, lin_null& rhs)
   {
     return rhs.print(out);
   }
+  virtual int Type()=0;
+  virtual int GetSize()=0;
+  virtual int get_meentional()=0;
+
 };

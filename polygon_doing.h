@@ -3,7 +3,7 @@ Polygon<H>::Polygon(Point<H>* ver, int _size) :Line(ver[0], ver[1]), size(_size)
   sides = new Line[_size - 1];
   for (int i = 1; i < _size - 1; i++)
   {
-    Line<H> tmp(ver[i], ver[i + 1])
+    Line<H> tmp(ver[i], ver[i + 1]);
       sides[i - 1] = tmp;
   }
   Line<H> tmp(ver[size - 1], ver[0]);
@@ -38,11 +38,12 @@ float* Polygon<D>::sides_lengths()
   return tmp;
 }
 
-template<class V>
-Line<V>* Polygon<V>::sides_array()
+template<class R>
+Line<R>* Polygon<R>::sides_array()
 {
-  Line<V>* tmp = new Line<V>[size];
-  Line<V> er = ((*this).get_PointA(), (*this).get_PointB());
+
+  Line<R>* tmp = new Line<R>[size];
+  Line<R> er((*this).get_PointA(), (*this).get_PointB());
   tmp[0] = er;
   for (int i = 1; i < size; i++)tmp[i] = sides[i - 1];
   return tmp;
@@ -78,3 +79,4 @@ Polygon<G>& Polygon<G>::operator = (Polygon<G>& rhs)
   }
   return *this;
 }
+

@@ -56,3 +56,4 @@ ostream& Circle<G>::print(ostream& out)
     out << tmp << length;
     return out;
 }
+

@@ -47,3 +47,4 @@ void Square<V>::set_square(Square& rhs)
     (*this).set_Point(rhs.get_Diag().get_PointA());
     RN = rhs.get_Diag().get_PointB();
 }
+

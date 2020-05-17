@@ -13,13 +13,13 @@ float Cube<O>::Area()
 template<class U>
 float Cube<U>::V()
 {
-    return up.Area()*up.get_Length().module();
+    return( up.Area())*((up.get_Diag().module())/sqrt(2));
 }
 
 template<class E>
 Square<E> Cube<E>::Square_low()
 {
-  Square<E>B(rhs.get_Diag().get_PointA(), rhs.get_Diag().get_PointB());
+  Square<E>B((*this).get_Diag().get_PointA(), (*this).get_Diag().get_PointB());
   return B;
 }
 
@@ -45,3 +45,4 @@ ostream& Cube<G>::print(ostream& out)
   out << (*this).Square_low() << (*this).Square_Up();
   return out;
 }
+

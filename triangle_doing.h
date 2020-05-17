@@ -1,13 +1,13 @@
 template<class E>
 Point<E> Triangle<E>::get_PointA()
 {
-  return (*this).get_PointA();
+  return Line::get_PointA();
 }
 
 template<class H>
 Point<H> Triangle<H>::get_PointB()
 {
-  return (*this).get_PointB();
+  return Line::get_PointB();
 }
 
 template<class J>

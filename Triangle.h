@@ -14,7 +14,20 @@ public:
   float V()override;
   Triangle& operator = (Triangle& rhs);
   ostream& print(ostream& out)override;
+  int Type()override
+  {
+    return 3;
+  }
+  int GetSize()override
+  {
+    return (*this).Type();
+  }
+  int get_meentional()override
+  {
+    return Top.get_meentional();
+  }
 private:
+ 
   Point Top;
 };
 #include"triangle_doing.h"

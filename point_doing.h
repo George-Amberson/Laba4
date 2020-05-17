@@ -104,3 +104,4 @@ void Point<E>::set_Point(E* er,int size)
   for (int i = 0; i < size; i++)koorF[i] = er[i];
   mer = size;
 }
+

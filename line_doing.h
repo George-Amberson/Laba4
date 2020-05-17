@@ -70,3 +70,4 @@ void Line<Y>::set_line(Point<Y>& A, Point<Y>& B)
   (*this).set_Point(A);
   korrS = B;
 }
+

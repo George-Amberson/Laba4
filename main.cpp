@@ -11,21 +11,23 @@ int main()
     Point<int>B(3, 3);
     Point<int>Q(0, 3);
     Line<int>C(A, B);
-    cout << C.module() << endl;
-    Circle<int>D(A, C);
-    Square<int>E(Q, A);
+
     Container<int>F;
-    F.insert(Q);
+    Container<int>X;
+    F.insert(A);
     F.insert(B);
-    F.insert(E);
-    cout << F;
-    F.Delete(Q);
-    F.out(Q);
-    cout << "Everything's fine" << endl;
+    F.insert(C);
+    cout << F<<endl<<"-------------------------------"<<endl;
+    F.Writeln("working");
+    X.Readln("C:\\Users\\a_kul\\Documents\\Visual Studio 2013\\Projects\\Laba4\\Laba4\\working");
+    cout << X;
   }
   catch (length_error& er)
   {
     cout << er.what();
+  }
+  catch (domain_error& r){
+    cout << r.what() << endl;
   }
   return 0;
 }

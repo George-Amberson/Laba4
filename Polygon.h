@@ -11,12 +11,26 @@ public:
   ~Polygon(){}
   int get_size();
   float* sides_lengths();
-  Line* sides_array();
+
+  Line<E>* sides_array();
   ostream& print(ostream& out)override;
   float Area()override;
   float V()override;
   Polygon& operator =(Polygon& rhs);
+  int Type()override
+  {
+    return 6;
+  }
+  int GetSize()override
+  {
+    return (*this).get_size();
+  }
+  int get_meentional()override
+  {
+    return Line<E>::get_meentional();
+  }
 private:
+
   Line* sides;
   int size;
 };

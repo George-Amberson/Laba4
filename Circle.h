@@ -15,7 +15,20 @@ public:
   Point get_centr();
   Circle& operator =(Circle& rhs);
   ostream& print(ostream& out)override;
+  int Type() override
+  {
+    return 0;
+  }
+  int GetSize()override
+  {
+    return (*this).Type();
+  }
+  int get_meentional()override
+  {
+    return length.get_meentional();
+  }
 private:
+
   Line<A> length;
 };
 #include "circle_doing.h"

@@ -20,7 +20,22 @@ public:
   float Area()override;
   float V()override;
   void set_line(Point& A, Point& B);
+  int Type()override
+  {
+    return 2;
+  }
+  int GetSize()override
+  {
+    return (*this).Type();
+  }
+  int get_meentional()override
+  {
+    return koorS.get_meentional();
+  }
+
+
 private:
+
   Point<D> koorS;
 };
 #include "line_doing.h"
